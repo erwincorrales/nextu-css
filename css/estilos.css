@@ -1,0 +1,212 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    background-color: #02010a;
+    
+}
+
+.contenido{
+    max-width: 900px;
+    margin: 0 auto;
+    
+}
+
+/* TODO LO RELACIONADO CON EL HEADER*/
+
+.header{
+    background-color: #5b7989;
+    border-radius: 10px 10px 0px 0px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row wrap;
+    text-shadow: 2px 2px #02010a; 
+    animation: saltos 4s infinite;
+}
+
+header{
+    width: 62%;
+    padding: 10px 20px;
+    font-size: 19px;
+    animation: salto 5s;
+}
+
+nav{
+    padding: 42px 0px;
+    width: 38%;
+    text-align: center;
+    
+}
+
+a{
+    text-decoration: none;
+    text-align: right;
+    color: white;
+    font-size: 26px;
+    padding: 0px 10px;
+    text-decoration: underline;
+}
+
+.subrayado{
+    text-decoration-line: none;
+}
+
+/* Foto principal y secundaria */
+
+img{
+    box-shadow: 2px 2px #02010a;
+}
+
+
+#fotoprincipal{
+    width: 100%;
+    text-align: center;
+    background-color: #82c3a6;
+    
+}
+
+#fotoprincipal img{
+    width: 96%;
+    margin: 30px auto;
+    max-height: 400px;
+}
+
+#fotosecundaria, .paisajes{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #d5c75f;
+    color: black;
+}
+
+figure {
+    text-align: center;
+    font-size: 30px;
+    margin: 40px auto;
+    padding: 0;
+}
+
+#fotosecundaria figure{
+    width: 50%; 
+}
+
+.paisajes figure{
+    width: 33.33%    
+}
+
+a img{
+    width: 92%;
+    border: 1px solid black; 
+    transition: all 1s;
+}
+
+#fsecundaria1:hover{
+    transform: rotate(10deg);
+}
+
+#fsecundaria2:hover{
+    transform: translate(20px, -5px);
+    box-shadow: 20px #82c3a6;
+}
+
+
+footer{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #C6d5c5;
+    color: black;
+    border-radius: 0 0 10px 10px;
+}
+
+footer div{
+    width: 25%;
+    padding: 30px 20px;
+    text-shadow: none;
+}
+
+.redes{
+    width:30px;
+    
+}
+
+footer p{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+/*EFECTOS IMAGENES PAISAJE*/
+
+.paisajes figure:nth-child(1){
+    -webkit-filter:  blur(10px);
+    -o-filter: blur(10px);
+    filter: blur(10px);
+}
+
+.paisajes figure:nth-child(even){
+    -webkit-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.paisajes figure:nth-child(3) {
+    -webkit-filter: sepia(60%);
+    -o-filter: sepia(100%);
+    filter:sepia(60%);
+}
+
+/*MOBILE */
+
+@media (max-width: 900px){
+    header{
+        width: 100%;
+        text-align: center;
+    }
+    nav {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    #fotosecundaria figure,
+    .paisajes figure{
+        width: 100%;
+        margin: 5px auto;
+    }
+    
+    footer div {
+        width: 100%;
+    }
+}
+
+@keyframes saltos{
+    0%{
+        .contenido{
+            margin-top: 150%;
+        }
+    }
+    60%{
+        .contenido{
+            margin-top: -5%;
+        }
+    }
+    100%{
+        .contenido{
+            margin-top: 0%;
+        }
+    }
+}
